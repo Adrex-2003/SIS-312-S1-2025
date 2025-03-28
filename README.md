@@ -33,7 +33,7 @@ Para ejecutar los ejercicios en **Java**, se recomienda:
 
 ## Cómo Clonar el Repositorio
 ```bash
-git clone https://github.com/tu_usuario/tu_repositorio.git
+git clone https://github.com/Adrex-2003/SIS-312-S1-2025.git
 ```
 
 ---
