@@ -1,19 +1,30 @@
 import java.util.Scanner;
+
 public class Main {
-    public static void Main(String[] args) {
-        Scanner entrada = new scanner(system.in);
-        System.out.println("Introduce un nombre de Usuario: ");
-        String usuario = Scanner.nextLine();
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
 
-        boolean tamanio = usuario.length() >= 5;
-        boolean caracteres = usuario.matches("^[a-zA-Z1-9_]+$");
-        boolean espacios = !ususario.contains("");
-        boolean inicio = Character.isAlphabetic(ususario.charAt(1));
+        for (int i = 0; i < 5; i++) {
 
-        if(tamano || caracteres || inicio || !espacios){
-            System.out.println("Valido");
-        }else{
-            System.out.println("No valido");
-        in.cloce();
+            System.out.println("Introduce un nombre de Usuario: ");
+            String usuario = entrada.nextLine();
+
+            boolean tamanio = usuario.length() >= 5 && usuario.length() <= 15;
+            boolean caracteres = usuario.matches("^[a-zA-Z0-9_]+$");
+            boolean espacios = !usuario.contains(" ");
+            boolean inicio = Character.isAlphabetic(usuario.charAt(0));
+
+            String salida = "";
+
+            salida = tamanio == false ? salida + "fuera del rango \n" : salida;
+            salida = caracteres == false ? salida + "No se aceptan caracteres especiales \n" : salida;
+            salida = espacios == false ? salida + "No se aceptan espacios \n" : salida;
+            salida = inicio == false ? salida + "No debe empezar por numeros \n" : salida;
+
+            salida = salida.length() == 0 ? "Nombre valido" : salida;
+
+            System.out.println(salida);
+        }
+        entrada.close();
     }
 }
