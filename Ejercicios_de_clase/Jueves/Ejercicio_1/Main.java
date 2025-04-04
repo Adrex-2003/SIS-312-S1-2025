@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Ejercicio_1;
 // Semana 1 (27 - 03 - 2025)
 // Ejercicio 1: Realizar un programa que lea números enteros hasta que se ingrese un 0.
 // Al finalizar se debe mostrar la suma de los números, el promedio, el mayor y el menor de los números ingresados,
