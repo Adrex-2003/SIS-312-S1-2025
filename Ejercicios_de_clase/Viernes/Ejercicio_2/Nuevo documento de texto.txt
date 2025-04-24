@@ -1,0 +1,22 @@
+
+El usuario debe ingresar una contraseña (inicialmente "1234").
+Si falla 3 veces, el programa se cierra.
+
+Menú principal:
+Depositar dinero: Suma el monto al saldo actual (inicial: $1000).
+
+Retirar dinero:
+No puede retirar más que el saldo disponible.
+Si el retiro es mayor a $500, se aplica un cargo adicional del 1%.
+
+Consultar saldo: Muestra el saldo disponible.
+
+Cambiar contraseña: Solicita la contraseña actual y la reemplaza si es correcta.
+
+Salir: Termina el programa.
+
+Validaciones:
+
+El programa debe prevenir entradas inválidas (ej. letras en montos numéricos).
+
+Cada operación debe mostrar mensajes claros (éxito, error, saldo insuficiente, etc.).
