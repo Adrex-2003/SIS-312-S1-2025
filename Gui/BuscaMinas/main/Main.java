@@ -35,23 +35,24 @@ class Main{
                     public void mouseClicked(MouseEvent e) {
                         if(cont == 0)
                             crearMinas(fila, columna);
+                        if(SwingUtilities.isRightMouseButton(e)){
+                            botones[fila][columna].setText("🚩");
+                            JOptionPane.showMessageDialog(ventana, "click derecho");
+                            if(botones[fila][columna].getActionCommand().equals("💣"))
+                                encontrados ++;
+                        }
                         if(SwingUtilities.isLeftMouseButton(e)){
                             botones[fila][columna].setText(botones[fila][columna].getActionCommand());
                             if(botones[fila][columna].getActionCommand().equals("💣")){
                                 JOptionPane.showMessageDialog(ventana, "¡Has perdido!");
                                 System.exit(0);
+                            }
                         }
-                       if(SwingUtilities.isRightMouseButton(e)){
-                            botones[fila][columna].setText("🚩");
-                            JOptionPane.showMessageDialog(null, "click derecho");
-                            if(botones[fila][columna].getActionCommand().equals("💣"))
-                                encontrados ++;
-                       }
+                       
                        if(encontrados == 10 && cont == 9 * 9){
                             JOptionPane.showMessageDialog(ventana, "¡Has ganado!");
                             System.exit(0);
                         }
-                       }
                        botones[fila][columna].setEnabled(false);
                        cont ++;
                 }});
